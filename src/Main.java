@@ -68,7 +68,7 @@ public class Main {
         System.out.print("Введите второе число: "); int num2 = in.nextInt();
         task12(num1, num2);*/
 
-        /*System.out.print("Введите размер массива: "); int size = in.nextInt();
+        System.out.print("Введите размер массива: "); int size = in.nextInt();
         int[] mass = new int[size];
 
         System.out.print("Введите элементы массива: ");
@@ -78,7 +78,7 @@ public class Main {
         }
 
         System.out.print("Введите индекс элемента: "); int index = in.nextInt();
-        System.out.println(task13(mass, index));*/
+        System.out.println(task13(mass, index));
 
         /*System.out.print("Введите пароль: "); String password = in.nextLine();
         task14(password);*/
@@ -367,9 +367,9 @@ public class Main {
     {
         try
         {
-            if(mass.length - 1 > index)
+            if(mass.length - 1 < index)
             {
-                throw new IndexOutOfBoundsException();
+                throw new IndexOutOfBoundsException("Индекс выходит за рамки!");
             }
             return mass[index];
         }
